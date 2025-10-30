@@ -129,60 +129,210 @@
       <ul>
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#about">À propos</a></li>
-        <li><a href="#products">Produits</a></li>
-        <li><a href="#videos">Vidéos</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <li><a /* ========== STYLE GLOBAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-  <section id="accueil" class="hero">
-    <h2>Apprendre. Innover. Partager.</h2>
-    <p>ALAN Edu Tech — La technologie au service de l’éducation moderne.</p>
-    <a href="#about" class="btn">Découvrir plus</a>
-  </section>
+html {
+  scroll-behavior: smooth;
+}
 
-  <section id="about" class="about">
-    <h2 class="section-title">À propos</h2>
-    <p>ALAN Edu Tech est une plateforme éducative et technologique dédiée à la formation, à l’innovation et au partage de ressources pour les enseignants, étudiants et passionnés du numérique.</p>
-  </section>
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
 
-  <section id="products" class="products">
-    <h2 class="section-title">Nos Produits</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="images/course.jpg" alt="Cours en ligne">
-        <h3>Cours en ligne</h3>
-        <p>Des modules interactifs pour apprendre à votre rythme.</p>
-      </div>
-      <div class="product-card">
-        <img src="images/app.jpg" alt="Application mobile">
-        <h3>Application mobile</h3>
-        <p>Apprenez et testez vos connaissances depuis votre smartphone.</p>
-      </div>
-      <div class="product-card">
-        <img src="images/tools.jpg" alt="Outils éducatifs">
-        <h3>Outils éducatifs</h3>
-        <p>Des solutions numériques pour les enseignants et les écoles.</p>
-      </div>
-    </div>
-  </section>
+/* ========== EN-TÊTE ========== */
+header {
+  background: linear-gradient(90deg, #004aad, #0072ff);
+  color: white;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
 
-  <section id="videos" class="videos">
-    <h2 class="section-title">Vidéos</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-  </section>
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
-  <section id="contact" class="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Email : contact@alanedutech.com</p>
-    <p>Téléphone : +228 92 10 38 99 | 98 93 67 26</p>
-    <p>Adresse : Lomé, Togo</p>
-  </section>
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
 
-  <footer>
-    <p>© 2025 ALAN Edu Tech | Tous droits réservés.</p>
-  </footer>
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-</body>
-</html>
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* ========== SECTION HERO ========== */
+.hero {
+  background: linear-gradient(rgba(0,74,173,0.7), rgba(0,74,173,0.7)), 
+              url('images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 10%;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.btn {
+  background: #ffd700;
+  color: #004aad;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+/* ========== SECTIONS GÉNÉRALES ========== */
+section {
+  padding: 70px 10%;
+}
+
+.about, .products, .videos, .contact {
+  background: white;
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #004aad;
+  position: relative;
+}
+
+h2.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ffd700;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ========== PRODUITS ========== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.product-card {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ========== VIDÉOS ========== */
+iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ========== CONTACT ========== */
+.contact p {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ========== PIED DE PAGE ========== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #004aad;
+  color: white;
+  margin-top: 40px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
