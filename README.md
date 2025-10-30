@@ -176,7 +176,7 @@
   <section id="contact" class="contact">
     <h2 class="section-title">Contact</h2>
     <p>Email : contact@alanedutech.com</p>
-    <p>Téléphone : +228 90 00 00 00</p>
+    <p>Téléphone : +228 92 10 38 99 | 98 93 67 26</p>
     <p>Adresse : Lomé, Togo</p>
   </section>
 
