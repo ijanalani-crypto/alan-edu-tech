@@ -1,4 +1,9 @@
-# alan-edu-tech
+alan-edu-tech/
+│
+├── index.html
+├── style.css
+├── script.js
+└── images/
 <!DOCTYPE html>
 <html lang="fr">
 <head>
